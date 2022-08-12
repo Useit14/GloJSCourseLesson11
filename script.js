@@ -10,7 +10,9 @@ const handlerClick = () => {
 
 const handlerInput = (event) => {
   const circle = document.querySelector("#circle");
-  circle.style = `width:${event.target.value}%;hight:${event.target.value}%`;
+  const span = document.querySelector("#range-span");
+  span.textContent = event.target.value;
+  circle.style = `width:${event.target.value}%;height:${event.target.value}%`;
 };
 
 button.addEventListener("click", handlerClick);
